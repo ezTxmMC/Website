@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteRule ^$ / [L,R=301]
+
+RewriteCond %{QUERY_STRING} ^site=projects$
+RewriteRule ^$ /projects/? [L,R=301]
+
+RewriteCond %{QUERY_STRING} ^site=organizations$
+RewriteRule ^$ /organizations/? [L,R=301]
+
+RewriteCond %{QUERY_STRING} ^site=contact$
+RewriteRule ^$ /contact/? [L,R=301]
